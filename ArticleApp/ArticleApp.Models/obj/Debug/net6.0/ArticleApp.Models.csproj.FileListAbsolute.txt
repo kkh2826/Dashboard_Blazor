@@ -1,0 +1,12 @@
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\bin\Debug\net6.0\ArticleApp.Models.deps.json
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\bin\Debug\net6.0\ArticleApp.Models.dll
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\bin\Debug\net6.0\ArticleApp.Models.pdb
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\obj\Debug\net6.0\ArticleApp.Models.csproj.AssemblyReference.cache
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\obj\Debug\net6.0\ArticleApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\obj\Debug\net6.0\ArticleApp.Models.AssemblyInfoInputs.cache
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\obj\Debug\net6.0\ArticleApp.Models.AssemblyInfo.cs
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\obj\Debug\net6.0\ArticleApp.Models.csproj.CoreCompileInputs.cache
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\obj\Debug\net6.0\ArticleApp.Models.dll
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\obj\Debug\net6.0\refint\ArticleApp.Models.dll
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\obj\Debug\net6.0\ArticleApp.Models.pdb
+D:\Dashboard_Blazor\ArticleApp\ArticleApp.Models\obj\Debug\net6.0\ref\ArticleApp.Models.dll
