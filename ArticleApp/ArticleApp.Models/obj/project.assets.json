@@ -1,11 +1,36 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Dul/1.2.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Dul.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dul.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Dul/1.2.9": {
+      "sha512": "ArTSIMze2Cbx4bwYeGLn9UKe0d9sMohGOERn22D3aLVqCpf/Ox1HKCZ6jhWAXsaygEhO8FfQW1MmUNosC9krrA==",
+      "type": "package",
+      "path": "dul/1.2.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dul.1.2.9.nupkg.sha512",
+        "dul.nuspec",
+        "lib/netstandard2.0/Dul.dll"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Dul >= 1.2.9"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\kkh28\\.nuget\\packages\\": {}
@@ -45,6 +70,12 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Dul": {
+            "target": "Package",
+            "version": "[1.2.9, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

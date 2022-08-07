@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "p4+gLWaJ1lg9btMpdAlRm6VdUCd+wXlTV2wAJU7Kxge1LRekIxpWjQAEXl1kIkqchnXYDG8dzs60hGgjIEw++A==",
+  "dgSpecHash": "/nqYY2dOj1u3ndh7lbqGJGSDxldVj4RLfmt8QgsImrD6hMEuJnbGh9FfQmfZ5Wi0OKYblCSLiaFRoIfY6KpfKA==",
   "success": true,
   "projectFilePath": "D:\\Dashboard_Blazor\\ArticleApp\\ArticleApp.Models\\ArticleApp.Models.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\kkh28\\.nuget\\packages\\dul\\1.2.9\\dul.1.2.9.nupkg.sha512"
+  ],
   "logs": []
 }
