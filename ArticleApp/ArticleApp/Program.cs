@@ -1,10 +1,9 @@
 using ArticleApp.Areas.Identity;
 using ArticleApp.Data;
-using Microsoft.AspNetCore.Components;
+using ArticleApp.Models;
+using ArticleApp.Models.Articles;
 using Microsoft.AspNetCore.Components.Authorization;
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,6 +19,8 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 builder.Services.AddSingleton<WeatherForecastService>();
+
+AddDependencyInjectionContainerForArticles(builder, connectionString);
 
 var app = builder.Build();
 
@@ -49,3 +50,14 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
+
+// 게시판(Articles) 관련 의존성 주입 관련 코드만 따로 모아서 관리
+static void AddDependencyInjectionContainerForArticles(WebApplicationBuilder builder, string connectionString)
+{
+    // ArticleAppDbContext.cs Inject
+    builder.Services.AddDbContext<ArticleAppDbContext>(options =>
+        options.UseSqlServer(connectionString));
+
+    // IArticleRepository.cs Inject
+    builder.Services.AddTransient<IArticleRepository, ArticleRepository>();
+}
