@@ -62,4 +62,7 @@
   <ItemGroup>
     <Build Include="dbo\Tables\Articles.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ArticleApp.SqlServer.publish.xml" />
+  </ItemGroup>
 </Project>

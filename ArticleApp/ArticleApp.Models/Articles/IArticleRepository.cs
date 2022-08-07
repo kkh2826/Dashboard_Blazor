@@ -1,6 +1,6 @@
 ﻿using Dul.Domain.Common;
 
-namespace ArticleApp.Models
+namespace ArticleApp.Models.Articles
 {
     public interface IArticleRepository
     {
