@@ -19,6 +19,42 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Dashboard_Blazor/ArticleApp/ArticleApp/Pages/Articles/Components/ArticleDeleteDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aWNsZXNcQ29tcG9uZW50c1xBcnRpY2xlRGVsZXRlRGlhbG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dashboard_Blazor/ArticleApp/ArticleApp/Pages/Articles/Components/ArticleEditorForm.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aWNsZXNcQ29tcG9uZW50c1xBcnRpY2xlRWRpdG9yRm9ybS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dashboard_Blazor/ArticleApp/ArticleApp/Pages/Articles/Components/ArticlePager.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aWNsZXNcQ29tcG9uZW50c1xBcnRpY2xlUGFnZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dashboard_Blazor/ArticleApp/ArticleApp/Pages/Articles/Create.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aWNsZXNcQ3JlYXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dashboard_Blazor/ArticleApp/ArticleApp/Pages/Articles/Delete.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aWNsZXNcRGVsZXRlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dashboard_Blazor/ArticleApp/ArticleApp/Pages/Articles/Details.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aWNsZXNcRGV0YWlscy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dashboard_Blazor/ArticleApp/ArticleApp/Pages/Articles/Edit.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aWNsZXNcRWRpdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dashboard_Blazor/ArticleApp/ArticleApp/Pages/Articles/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aWNsZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Dashboard_Blazor/ArticleApp/ArticleApp/Pages/Articles/Manage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXJ0aWNsZXNcTWFuYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dashboard_Blazor/ArticleApp/ArticleApp/Pages/Counter.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
