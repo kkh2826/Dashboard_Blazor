@@ -10,7 +10,10 @@ namespace ArticleApp.Models.Tests
         [TestMethod]
         public async Task ArticleRepositoryAllMethodTest()
         {
-            var options = new DbContextOptionsBuilder<ArticleAppDbContext>().UseInMemoryDatabase(databaseName: "ArticleApp").Options;
+            var options = new DbContextOptionsBuilder<ArticleAppDbContext>()
+                .UseInMemoryDatabase(databaseName: "ArticleApp").Options;
+                //.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database = ArticleApp; Trusted_Connection = True;").Options;
+
 
             // AddAsync()
             using (var context = new ArticleAppDbContext(options))
