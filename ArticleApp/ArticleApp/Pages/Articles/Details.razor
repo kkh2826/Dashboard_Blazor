@@ -1,8 +1,50 @@
 ﻿@page "/Articles/Details/{Id:int}"
 
+@inject NavigationManager NavigationManager;
+@inject IArticleRepository ArticleRepository;
+
 <h3>Details</h3>
+
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="id">ID: </label> @Model.Id
+            </div>
+
+            <div class="form-group">
+                <label for="id">Title: </label> @Model.Title
+            </div>
+
+            <div class="form-group">
+                <a href="/Articles/Edit/@Model.Id" class="btn btn-primary" tape="button">Edit</a>
+                <a href="/Articles/Delete/@Model.Id" class="btn btn-danger" tape="button">Delete</a>
+                <a href="/Articles" class="btn btn-secondary" tape="button">List</a>
+            </div>
+
+        </div>
+    </div>
+</div>
 
 @code {
     [Parameter]
     public int  Id { get; set; }
+
+    public Article Model { get; set; } = new Article();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Model = await ArticleRepository.GetArticleByIdAsync(Id);
+    }
+
+    protected async Task btnSubmit_Click()
+    {
+        // 저장 로직
+        await ArticleRepository.AddArticleAsync(Model);
+
+        // 리스트 페이지 이동
+        NavigationManager.NavigateTo("/Articles");
+    }
 }
