@@ -1,8 +1,57 @@
 ﻿@page "/Articles/Edit/{Id:int}"
 
+@inject NavigationManager NavigationManager;
+@inject IArticleRepository ArticleRepository;
+
 <h3>Edit</h3>
+<hr />
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <EditForm Model="Model" OnValidSubmit="btnEdit_Click">
+                <DataAnnotationsValidator></DataAnnotationsValidator>
+                <ValidationSummary></ValidationSummary>
+                <div class="form-group">
+                    <label for="id">ID: </label> @Model.Id
+                </div>
+                <div class="form-group">
+                    <label for="Content">Content</label>
+                    <InputText id="Content" class="form-control" placeholder="Enter Content" @bind-Value="@Model.Content"></InputText>
+                    <ValidationSummary For="@(() => Model.Content)"></ValidationSummary>
+                </div>
+                <div class="form-group">
+                    <label for="Title">Title</label>
+                    <InputText id="Title" class="form-control" placeholder="Enter Title" @bind-Value="@Model.Title"></InputText>
+                    <ValidationSummary For="@(() => Model.Title)"></ValidationSummary>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                    <a href="/Articles" class="btn btn-secondary" tape="button">List</a>
+                </div>
+            </EditForm>
+
+        </div>
+    </div>
+</div>
 
 @code {
     [Parameter]
     public int  Id { get; set; }
+
+    public Article Model { get; set; } = new Article();
+
+    protected override async Task OnInitializedAsync()
+    {
+        Model = await ArticleRepository.GetArticleByIdAsync(Id);
+    }
+
+    protected async Task btnEdit_Click()
+    {
+        // 저장 로직
+        await ArticleRepository.EditArticleAsync(Model);
+
+        // 상세보기 페이지 이동
+        NavigationManager.NavigateTo($"/Articles/Details/{Id}");
+    }
 }

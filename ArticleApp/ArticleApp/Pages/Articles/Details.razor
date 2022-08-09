@@ -19,6 +19,12 @@
             </div>
 
             <div class="form-group">
+                <label for="id">Content: </label> 
+                <hr />
+                @Model.Content
+            </div>
+
+            <div class="form-group">
                 <a href="/Articles/Edit/@Model.Id" class="btn btn-primary" tape="button">Edit</a>
                 <a href="/Articles/Delete/@Model.Id" class="btn btn-danger" tape="button">Delete</a>
                 <a href="/Articles" class="btn btn-secondary" tape="button">List</a>

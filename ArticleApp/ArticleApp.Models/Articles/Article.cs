@@ -8,5 +8,8 @@ namespace ArticleApp.Models.Articles
         public int Id { get; set; }
         [Required(ErrorMessage = "제목을 입력하세요.")]
         public string Title { get; set; }
+
+        [Required(ErrorMessage = "내용을 입력하세요.")]
+        public string Content { get; set; }
     }
 }

@@ -16,8 +16,15 @@
                     <InputText id="Title" class="form-control" placeholder="Enter Title" @bind-Value="@Model.Title"></InputText>
                     <ValidationSummary For="@(() => Model.Title)"></ValidationSummary>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="/Articles" class="btn btn-secondary" tape="button">List</a>
+                <div class="form-group">
+                    <label for="Content">Content</label>
+                    <InputTextArea id="Content" class="form-control" placeholder="Enter Title" @bind-Value="@Model.Content"></InputTextArea>
+                    <ValidationSummary For="@(() => Model.Content)"></ValidationSummary>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <a href="/Articles" class="btn btn-secondary" tape="button">List</a>
+                </div>
             </EditForm>
 
         </div>
