@@ -12,7 +12,8 @@
 <h3>Manage</h3>
 
 <div>
-    <a href="/Articles/Create" class="btn btn-primary">Create</a>
+    <a href="/Articles/Create" class="btn btn-primary">Create(Page)</a>
+    <input type="button" value="Create(Modal)" class="btn btn-primary" data-toggle="modal" data-target="#articleEditDialog" @onclick="btnCreate_Click" />
 </div>
 
 @if (articles == null)
@@ -28,6 +29,10 @@ else
                 <th>Title</th>
                 <th>Created</th>
                 <th>&nbsp;</th>
+                <th>IsPinned</th>
+                <th>&nbsp;</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -42,8 +47,15 @@ else
                         <a href="/Articles/Edit/@article.Id" class="btn btn-light">Edit</a>
                         <a href="/Articles/Delete/@article.Id" class="btn btn-light">Delete</a>
                     </td>
+                    <td>@(article.IsPinned ? "공지" : "")</td>
                     <td>
-                        <input type="button" value="공지글로 올리기" class="btn btn-light" @onclick="@(() => PinnedBy(article))"/>
+                        <input type="button" value="공지글로 올리기" class="btn btn-light" @onclick="@(() => PinnedBy(article))" />
+                    </td>
+                    <td>
+                        <input type="button" value="Edit" class="btn btn-danger" data-toggle="modal" data-target="#articleEditDialog" @onclick="(() => EditBy(article))" />
+                    </td>
+                    <td>
+                        <input type="button" value="Delete" class="btn btn-danger" data-toggle="modal" data-target="#articleDeleteDialog" @onclick="(() => DeleteBy(article))" />
                     </td>
                 </tr>
             }
@@ -53,30 +65,78 @@ else
 
 <ArticlePager Model="pager" PageIndexChanged="PageIndexChanged"></ArticlePager>
 
+<ArticleDeleteDialog OnClick="btnDelete_Click"></ArticleDeleteDialog>
+
+<ArticleEditorForm SaveOrUpdated="SaveOrUpdated" Model="@_article">
+    <EditorFormTitle>@editorFormTitle</EditorFormTitle>
+</ArticleEditorForm>
+
 @if (isShow)
 {
-<div class="modal fade show d-block" tabindex="-1" role="dialog" style="display: block;">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">공지글로 올리기</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>@(_article.Id)를 공지글로 설정할까요.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" @onclick="btnTogglePineed_Click">설정</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" @onclick="btnClose_Click">취소</button>
-      </div>
+    <div class="modal fade show d-block" tabindex="-1" role="dialog" style="display: block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">공지글로 올리기</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>@(_article.Id)를 공지글로 설정할까요.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" @onclick="btnTogglePineed_Click">설정</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" @onclick="btnClose_Click">취소</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 }
 
 @code {
+
+    private void btnCreate_Click()
+    {
+        editorFormTitle = "글쓰기";
+        _article = new Article();
+    }
+
+    private string editorFormTitle = "";
+
+    private void EditBy(Article article)
+    {
+        editorFormTitle = "수정하기";
+        _article = article;
+    }
+
+    private async void SaveOrUpdated()
+    {
+        var pagingData = await ArticleRepository.GetAllAsync(pager.PageIndex, pager.PageSize);
+        pager.RecordCount = pagingData.TotalRecords;
+        articles = pagingData.Records.ToList();
+
+        StateHasChanged();
+    }
+
+    private async void btnDelete_Click()
+    {
+        await ArticleRepository.DeleteArticleAsync(_article.Id); // 삭제
+        await JSRuntime.InvokeAsync<object>("closeModal", "articleDeleteDialog"); // _Host.cshtml
+        _article = new Article(); // 선택 항목 초기화
+
+        var pagingData = await ArticleRepository.GetAllAsync(pager.PageIndex, pager.PageSize);
+        pager.RecordCount = pagingData.TotalRecords;
+        articles = pagingData.Records.ToList();
+
+        StateHasChanged();
+    }
+
+    private void DeleteBy(Article article)
+    {
+        _article = article;
+    }
+
     // 선택한 항목관리
     private Article _article = new Article();
 
@@ -111,12 +171,12 @@ else
 
     // 페이저 기본값 설정
     private PagerBase pager = new PagerBase()
-    {
-        PageNumber = 1,
-        PageIndex = 0,
-        PageSize = 2,
-        PagerButtonCount = 5
-    };
+        {
+            PageNumber = 1,
+            PageIndex = 0,
+            PageSize = 2,
+            PagerButtonCount = 5
+        };
 
     private List<Article> articles;
 
