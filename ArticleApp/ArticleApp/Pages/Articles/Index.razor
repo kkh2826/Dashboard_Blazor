@@ -44,7 +44,11 @@ else
             {
                 <tr>
                     <td>@article.Id</td>
-                    <td>@article.Title</td>
+                    <td>
+                        <a href="/Articles/Details/@article.Id">
+                            @article.Title
+                        </a>
+                    </td>
                     <td>@article.Created.ToShortTimeString()</td>
                     <td>
                         <a href="/Articles/Details/@article.Id" class="btn btn-light">Details</a>

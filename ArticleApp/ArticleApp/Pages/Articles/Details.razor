@@ -21,7 +21,7 @@
             <div class="form-group">
                 <label for="id">Content: </label> 
                 <hr />
-                @Model.Content
+                @((MarkupString)lblContext)
             </div>
 
             <div class="form-group">
@@ -40,9 +40,12 @@
 
     public Article Model { get; set; } = new Article();
 
+    private string lblContext = "";
+
     protected override async Task OnInitializedAsync()
     {
         Model = await ArticleRepository.GetArticleByIdAsync(Id);
+        lblContext = Model.Content.Replace("\n", "<br />");
     }
 
     protected async Task btnSubmit_Click()
