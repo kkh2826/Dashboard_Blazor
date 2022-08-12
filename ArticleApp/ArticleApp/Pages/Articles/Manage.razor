@@ -1,7 +1,145 @@
 ﻿@page "/Articles/Manage"
 
+@inject IArticleRepository ArticleRepository
+
+@using Dul.Domain.Common
+@using Dul.Web;
+
+@using ArticleApp.Pages.Articles.Components;
+
+@inject IJSRuntime JSRuntime;
+
 <h3>Manage</h3>
 
-@code {
+<div>
+    <a href="/Articles/Create" class="btn btn-primary">Create</a>
+</div>
 
+@if (articles == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Created</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var article in articles)
+            {
+                <tr>
+                    <td>@article.Id</td>
+                    <td>@article.Title</td>
+                    <td>@article.Created.ToShortTimeString()</td>
+                    <td>
+                        <a href="/Articles/Details/@article.Id" class="btn btn-light">Details</a>
+                        <a href="/Articles/Edit/@article.Id" class="btn btn-light">Edit</a>
+                        <a href="/Articles/Delete/@article.Id" class="btn btn-light">Delete</a>
+                    </td>
+                    <td>
+                        <input type="button" value="공지글로 올리기" class="btn btn-light" @onclick="@(() => PinnedBy(article))"/>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<ArticlePager Model="pager" PageIndexChanged="PageIndexChanged"></ArticlePager>
+
+@if (isShow)
+{
+<div class="modal fade show d-block" tabindex="-1" role="dialog" style="display: block;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">공지글로 올리기</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>@(_article.Id)를 공지글로 설정할까요.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" @onclick="btnTogglePineed_Click">설정</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" @onclick="btnClose_Click">취소</button>
+      </div>
+    </div>
+  </div>
+</div>
+}
+
+@code {
+    // 선택한 항목관리
+    private Article _article = new Article();
+
+    private bool isShow = false; // Notice Modal
+
+    private void PinnedBy(Article article)
+    {
+        _article = article;
+        isShow = true;
+        //JSRuntime.InvokeAsync<object>("alert", $"{article.Id}를 공지글로 설정할까요?");
+    }
+
+    private void btnClose_Click()
+    {
+        isShow = false;
+        _article = new Article();
+    }
+
+    private async void btnTogglePineed_Click()
+    {
+        _article.IsPinned = !_article.IsPinned;
+        await ArticleRepository.EditArticleAsync(_article);
+        isShow = false;
+
+        PagingResult<Article> pagingData = await ArticleRepository.GetAllAsync(pager.PageIndex, pager.PageSize);
+        pager.RecordCount = pagingData.TotalRecords; // 총 레코드 수
+        articles = pagingData.Records.ToList(); // 페이징 처리된 레코드
+
+        StateHasChanged();
+    }
+
+
+    // 페이저 기본값 설정
+    private PagerBase pager = new PagerBase()
+    {
+        PageNumber = 1,
+        PageIndex = 0,
+        PageSize = 2,
+        PagerButtonCount = 5
+    };
+
+    private List<Article> articles;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // 전체 데이터 모두 출력
+        //articles = await ArticleRepository.GetArticlesAsync();
+
+        // 페이징 처리된 데이터만 출력
+        PagingResult<Article> pagingData = await ArticleRepository.GetAllAsync(pager.PageIndex, pager.PageSize);
+        pager.RecordCount = pagingData.TotalRecords; // 총 레코드 수
+        articles = pagingData.Records.ToList(); // 페이징 처리된 레코드
+    }
+
+    private async void PageIndexChanged(int pageIndex)
+    {
+        pager.PageIndex = pageIndex;
+        pager.PageNumber = pageIndex + 1;
+
+        var pagingData = await ArticleRepository.GetAllAsync(pager.PageIndex, pager.PageSize);
+        pager.RecordCount = pagingData.TotalRecords; // 총 레코드 수
+        articles = pagingData.Records.ToList(); // 페이징 처리된 레코드
+
+        StateHasChanged();
+    }
 }

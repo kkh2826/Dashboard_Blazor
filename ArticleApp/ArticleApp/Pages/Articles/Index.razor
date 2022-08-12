@@ -12,6 +12,16 @@
 
 <div>
     <a href="/Articles/Create" class="btn btn-primary">Create</a>
+    <AuthorizeView>
+        <Authorized>
+        </Authorized>
+        <NotAuthorized>
+            <a href="/Articles/Manage" class="btn btn-primary">Manage</a>
+        </NotAuthorized>
+    </AuthorizeView>
+    <AuthorizeView Roles="Administrators, Managers">
+        <a href="/Articles/Manage" class="btn btn-primary">Manage</a>
+    </AuthorizeView>
 </div>
 
 @if (articles == null)
@@ -52,12 +62,12 @@ else
 @code {
     // 페이저 기본값 설정
     private PagerBase pager = new PagerBase()
-    {
-        PageNumber = 1,
-        PageIndex = 0,
-        PageSize = 2,
-        PagerButtonCount = 5
-    };
+        {
+            PageNumber = 1,
+            PageIndex = 0,
+            PageSize = 2,
+            PagerButtonCount = 5
+        };
 
     private List<Article> articles;
 
