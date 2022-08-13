@@ -16,10 +16,10 @@ namespace NoticeApp.Models
         }
         public async Task<Notice> AddAsync(Notice model)
         {
-            _context.Notcies.Add(model);
 
             try
             {
+                _context.Notices.Add(model);
                 await _context.SaveChangesAsync();
             }
             catch (Exception e)
@@ -60,14 +60,5 @@ namespace NoticeApp.Models
         }
 
 
-        public Task<PagingResult<Notice>> SearchAllAsync(int pageIndex, int pageSize, string searchQuery)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<PagingResult<Notice>> SearchAllByParentIdAsync(int pageIndex, int pageSize, string searchQuery, int parentId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

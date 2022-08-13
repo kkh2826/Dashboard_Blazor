@@ -1,0 +1,156 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models.Tests\\NoticeApp.Models.Tests.csproj": {}
+  },
+  "projects": {
+    "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models.Tests\\NoticeApp.Models.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models.Tests\\NoticeApp.Models.Tests.csproj",
+        "projectName": "NoticeApp.Models.Tests",
+        "projectPath": "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models.Tests\\NoticeApp.Models.Tests.csproj",
+        "packagesPath": "C:\\Users\\kkh28\\.nuget\\packages\\",
+        "outputPath": "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kkh28\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models\\NoticeApp.Models.csproj": {
+                "projectPath": "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models\\NoticeApp.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.8, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models\\NoticeApp.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models\\NoticeApp.Models.csproj",
+        "projectName": "NoticeApp.Models",
+        "projectPath": "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models\\NoticeApp.Models.csproj",
+        "packagesPath": "C:\\Users\\kkh28\\.nuget\\packages\\",
+        "outputPath": "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kkh28\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dul": {
+              "target": "Package",
+              "version": "[1.2.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[6.0.8, )"
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
