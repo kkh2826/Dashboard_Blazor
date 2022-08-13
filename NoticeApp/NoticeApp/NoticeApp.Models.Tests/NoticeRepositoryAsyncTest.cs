@@ -69,6 +69,26 @@ namespace NoticeApp.Models.Tests
             }
             #endregion
 
+            #region [7] GetStatus() Method Test
+            //[7] GetStatus() Method Test
+            using (var context = new NoticeAppDbContext(options))
+            {
+                int parentId = 1;
+
+                var no1 = await context.Notices.Where(m => m.Id == 1).SingleOrDefaultAsync();
+                no1.ParentId = parentId;
+                no1.IsPinned = true; // Pinned
+
+                context.Entry(no1).State = EntityState.Modified;
+                context.SaveChanges();
+
+                var repository = new NoticeRepositoryAsync(context, factory);
+                var r = await repository.GetStatus(parentId);
+
+                Assert.AreEqual(1, r.Item1); // Pinned Count == 1
+            }
+            #endregion
+
         }
     }
 }
