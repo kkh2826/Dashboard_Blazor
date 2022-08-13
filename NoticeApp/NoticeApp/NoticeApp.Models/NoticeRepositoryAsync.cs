@@ -1,29 +1,53 @@
 ﻿using Dul.Domain.Common;
+using Microsoft.Extensions.Logging;
 
 namespace NoticeApp.Models
 {
 
     public class NoticeRepositoryAsync : INoticeRepositoryAsync
     {
-        public Task<Notice> AddAsync(Notice model)
-        {
-            throw new NotImplementedException();
-        }
+        private readonly NoticeAppDbContext _context;
+        private readonly ILogger _logger;
 
-        public Task<bool> DeleteAsync(int id)
+        public NoticeRepositoryAsync(NoticeAppDbContext context, ILoggerFactory loggerFactory)
         {
-            throw new NotImplementedException();
+            this._context = context;
+            this._logger = loggerFactory.CreateLogger(nameof(NoticeRepositoryAsync));
         }
-
-        public Task<bool> EditAsync(Notice model)
+        public async Task<Notice> AddAsync(Notice model)
         {
-            throw new NotImplementedException();
+            _context.Notcies.Add(model);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                _logger.LogError($"에러 발생({nameof(AddAsync)}): {e.Message}");
+            }
+
+            return model;
         }
 
         public Task<List<Notice>> GetAllAsync()
         {
             throw new NotImplementedException();
         }
+        public Task<Notice> GetByIdAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+        public Task<bool> EditAsync(Notice model)
+        {
+            throw new NotImplementedException();
+        }
+        public Task<bool> DeleteAsync(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+
 
         public Task<PagingResult<Notice>> GetAllAsync(int pageIndex, int pageSize)
         {
@@ -35,10 +59,6 @@ namespace NoticeApp.Models
             throw new NotImplementedException();
         }
 
-        public Task<Notice> GetByIdAsync(int id)
-        {
-            throw new NotImplementedException();
-        }
 
         public Task<PagingResult<Notice>> SearchAllAsync(int pageIndex, int pageSize, string searchQuery)
         {
