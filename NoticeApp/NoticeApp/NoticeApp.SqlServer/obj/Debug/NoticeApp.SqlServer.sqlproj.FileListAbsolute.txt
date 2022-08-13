@@ -1,0 +1,10 @@
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp.SqlServer\bin\Debug\NoticeApp.SqlServer.dacpac
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp.SqlServer\bin\Debug\NoticeApp.SqlServer.dll
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp.SqlServer\bin\Debug\NoticeApp.SqlServer.pdb
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp.SqlServer\obj\Debug\NoticeApp.SqlServer.sqlproj.AssemblyReference.cache
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp.SqlServer\obj\Debug\Model.xml
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp.SqlServer\obj\Debug\refactor.xml
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp.SqlServer\obj\Debug\postdeploy.sql
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp.SqlServer\obj\Debug\predeploy.sql
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp.SqlServer\obj\Debug\NoticeApp.SqlServer.dll
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp.SqlServer\obj\Debug\NoticeApp.SqlServer.pdb
