@@ -45,6 +45,30 @@ namespace NoticeApp.Models.Tests
                 Assert.AreEqual("[1] 관리자", model.Name);
             }
             #endregion
+
+            #region [2] GetAllAsync() Method Test
+            //[2] GetAllAsync() Method Test
+            using (var context = new NoticeAppDbContext(options))
+            {
+                // 트랜잭션 관련 코드는 InMemoryDatabase 공급자에서는 지원 X
+                //using (var transaction = context.Database.BeginTransaction()) { transaction.Commit(); }
+                //[A] Arrange
+                var repository = new NoticeRepositoryAsync(context, factory);
+                var model = new Notice { Name = "[2] 홍길동", Title = "공지사항입니다.", Content = "내용입니다." };
+
+                //[B] Act
+                await repository.AddAsync(model); // Id: 2
+                await repository.AddAsync(new Notice { Name = "[3] 백두산", Title = "공지사항입니다." }); // Id: 3
+            }
+            using (var context = new NoticeAppDbContext(options))
+            {
+                //[C] Assert
+                var repository = new NoticeRepositoryAsync(context, factory);
+                var models = await repository.GetAllAsync();
+                Assert.AreEqual(3, models.Count()); // TotalRecords: 3
+            }
+            #endregion
+
         }
     }
 }

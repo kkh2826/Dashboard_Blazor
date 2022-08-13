@@ -1,4 +1,5 @@
 ﻿using Dul.Domain.Common;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 
 namespace NoticeApp.Models
@@ -30,9 +31,9 @@ namespace NoticeApp.Models
             return model;
         }
 
-        public Task<List<Notice>> GetAllAsync()
+        public async Task<List<Notice>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Notices.OrderByDescending(m => m.Id).ToListAsync();
         }
         public Task<Notice> GetByIdAsync(int id)
         {
