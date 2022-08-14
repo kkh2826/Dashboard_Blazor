@@ -69,6 +69,82 @@ namespace NoticeApp.Models.Tests
             }
             #endregion
 
+            #region [3] GetByIdAsync() Method Test
+            //[3] GetByIdAsync() Method Test
+            using (var context = new NoticeAppDbContext(options))
+            {
+                // Empty
+            }
+            using (var context = new NoticeAppDbContext(options))
+            {
+                var repository = new NoticeRepositoryAsync(context, factory);
+                var model = await repository.GetByIdAsync(2);
+                Assert.IsTrue(model.Name.Contains("길동"));
+                Assert.AreEqual("[2] 홍길동", model.Name);
+            }
+            #endregion
+
+            #region [4] EditAsync() Method Test
+            //[4] EditAsync() Method Test
+            using (var context = new NoticeAppDbContext(options))
+            {
+                // Empty
+            }
+            using (var context = new NoticeAppDbContext(options))
+            {
+                var repository = new NoticeRepositoryAsync(context, factory);
+                var model = await repository.GetByIdAsync(2);
+
+                model.Name = "[2] 임꺽정"; // Modified
+                await repository.EditAsync(model);
+
+                var updateModel = await repository.GetByIdAsync(2);
+
+                Assert.IsTrue(updateModel.Name.Contains("꺽정"));
+                Assert.AreEqual("[2] 임꺽정", updateModel.Name);
+                Assert.AreEqual("[2] 임꺽정",
+                    (await context.Notices.Where(m => m.Id == 2).SingleOrDefaultAsync())?.Name);
+            }
+            #endregion
+
+            #region [5] DeleteAsync() Method Test
+            //[5] DeleteAsync() Method Test
+            using (var context = new NoticeAppDbContext(options))
+            {
+                // Empty
+            }
+            using (var context = new NoticeAppDbContext(options))
+            {
+                var repository = new NoticeRepositoryAsync(context, factory);
+                await repository.DeleteAsync(2);
+
+                Assert.AreEqual(2, (await context.Notices.CountAsync()));
+                Assert.IsNull(await repository.GetByIdAsync(2));
+            }
+            #endregion
+
+            #region [6] GetAllAsync(PagingAsync)() Method Test
+            //[6] GetAllAsync(PagingAsync)() Method Test
+            using (var context = new NoticeAppDbContext(options))
+            {
+                // Empty
+            }
+            using (var context = new NoticeAppDbContext(options))
+            {
+                int pageIndex = 0;
+                int pageSize = 1;
+
+                var repository = new NoticeRepositoryAsync(context, factory);
+                var noticesSet = await repository.GetAllAsync(pageIndex, pageSize);
+
+                var firstName = noticesSet.Records.FirstOrDefault()?.Name;
+                var recordCount = noticesSet.TotalRecords;
+
+                Assert.AreEqual("[3] 백두산", firstName);
+                Assert.AreEqual(2, recordCount);
+            }
+            #endregion
+
             #region [7] GetStatus() Method Test
             //[7] GetStatus() Method Test
             using (var context = new NoticeAppDbContext(options))
