@@ -47,7 +47,7 @@ namespace NoticeApp.Pages.Notices.Components
 
         protected async void CreateOrEditClick()
         {
-            if (int.TryParse(parentId, out int newParentId))
+            if (!int.TryParse(parentId, out int newParentId))
             {
                 newParentId = 0;
             }
