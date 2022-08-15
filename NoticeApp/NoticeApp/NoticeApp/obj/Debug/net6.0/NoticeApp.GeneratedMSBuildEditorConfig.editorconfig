@@ -67,6 +67,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWNlc1xNYW5hZ2UucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Dashboard_Blazor/NoticeApp/NoticeApp/NoticeApp/Pages/Notices/Report.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90aWNlc1xSZXBvcnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dashboard_Blazor/NoticeApp/NoticeApp/NoticeApp/Shared/LoginDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

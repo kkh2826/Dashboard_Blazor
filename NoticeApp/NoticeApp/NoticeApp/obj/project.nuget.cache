@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Bm7GoHsln9ZJh0yh4rAhLsYMzBKtVemJ7u4k1hmX76NsaGW+hTTLnSkgad1EiycXv2fIZYat2JYCHhPIDqbBaA==",
+  "dgSpecHash": "EsnFRQgB3JNfhBZ8ua1hfP1imASrPJcCzIk4sixi4Tk5d2q0A37Ql+u90Z/ygERFAQvAdDFZg4qFlh9B5hVgkQ==",
   "success": true,
   "projectFilePath": "D:\\Dashboard_Blazor\\NoticeApp\\NoticeApp\\NoticeApp\\NoticeApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kkh28\\.nuget\\packages\\chartjs.blazor\\1.1.0\\chartjs.blazor.1.1.0.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\dul\\1.2.9\\dul.1.2.9.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\dulpager\\1.0.0\\dulpager.1.0.0.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
@@ -19,7 +20,7 @@
     "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.7\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.7.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.7\\microsoft.aspnetcore.identity.ui.6.0.7.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.10\\microsoft.aspnetcore.metadata.3.1.10.nupkg.sha512",
-    "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.8\\microsoft.entityframeworkcore.6.0.8.nupkg.sha512",
@@ -53,6 +54,7 @@
     "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\kkh28\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.0\\system.configuration.configurationmanager.6.0.0.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",

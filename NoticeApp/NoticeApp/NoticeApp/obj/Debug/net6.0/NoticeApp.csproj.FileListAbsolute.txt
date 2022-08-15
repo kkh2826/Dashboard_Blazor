@@ -75,3 +75,5 @@ D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp\obj\Debug\net6.0\refint\Notice
 D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp\obj\Debug\net6.0\NoticeApp.pdb
 D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp\obj\Debug\net6.0\NoticeApp.genruntimeconfig.cache
 D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp\obj\Debug\net6.0\ref\NoticeApp.dll
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp\bin\Debug\net6.0\ChartJs.Blazor.dll
+D:\Dashboard_Blazor\NoticeApp\NoticeApp\NoticeApp\bin\Debug\net6.0\Newtonsoft.Json.dll
