@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Components;
 using NoticeApp.Models;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace NoticeApp.Pages.Notices
 {
@@ -19,21 +22,37 @@ namespace NoticeApp.Pages.Notices
             PageIndex = 0,
             PageSize = 2,
             PagerButtonCount = 5
-            
         };
 
         protected override async Task OnInitializedAsync()
         {
-            await DisplayData();
+            if (this.searchQuery != "")
+            {
+                await DisplayData();
+            }
+            else
+            {
+                await SearchData();
+            }
         }
 
+        /// <summary>
+        /// NoticeApp - UploadApp - ReplyApp을 거쳐 여기 코드가 더 정리됩니다.
+        /// </summary>
+        /// <returns></returns>
         private async Task DisplayData()
         {
             //await Task.Delay(3000);
-            var resultSet = await NoticeRepositoryAsyncReference.GetAllAsync(pager.PageIndex, pager.PageSize);
-            pager.RecordCount = resultSet.TotalRecords;
-            models = resultSet.Records.ToList();
+            var resultsSet = await NoticeRepositoryAsyncReference.GetAllAsync(pager.PageIndex, pager.PageSize);
+            pager.RecordCount = resultsSet.TotalRecords;
+            models = resultsSet.Records.ToList();
+        }
 
+        private async Task SearchData()
+        {
+            var resultsSet = await NoticeRepositoryAsyncReference.SearchAllAsync(pager.PageIndex, pager.PageSize, this.searchQuery);
+            pager.RecordCount = resultsSet.TotalRecords;
+            models = resultsSet.Records.ToList();
         }
 
         protected void NameClick(int id)
@@ -46,10 +65,27 @@ namespace NoticeApp.Pages.Notices
             pager.PageIndex = pageIndex;
             pager.PageNumber = pageIndex + 1;
 
-            await DisplayData();
+            if (this.searchQuery == "")
+            {
+                await DisplayData();
+            }
+            else
+            {
+                await SearchData();
+            }
 
             StateHasChanged();
         }
 
+        private string searchQuery = "";
+
+        protected async void Search(string query)
+        {
+            this.searchQuery = query;
+
+            await SearchData();
+
+            StateHasChanged();
+        }
     }
 }
