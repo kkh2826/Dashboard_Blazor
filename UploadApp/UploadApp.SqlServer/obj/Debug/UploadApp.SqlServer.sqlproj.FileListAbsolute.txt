@@ -1,0 +1,10 @@
+D:\Dashboard_Blazor\UploadApp\UploadApp.SqlServer\bin\Debug\UploadApp.SqlServer.dacpac
+D:\Dashboard_Blazor\UploadApp\UploadApp.SqlServer\bin\Debug\UploadApp.SqlServer.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp.SqlServer\bin\Debug\UploadApp.SqlServer.pdb
+D:\Dashboard_Blazor\UploadApp\UploadApp.SqlServer\obj\Debug\UploadApp.SqlServer.sqlproj.AssemblyReference.cache
+D:\Dashboard_Blazor\UploadApp\UploadApp.SqlServer\obj\Debug\Model.xml
+D:\Dashboard_Blazor\UploadApp\UploadApp.SqlServer\obj\Debug\refactor.xml
+D:\Dashboard_Blazor\UploadApp\UploadApp.SqlServer\obj\Debug\postdeploy.sql
+D:\Dashboard_Blazor\UploadApp\UploadApp.SqlServer\obj\Debug\predeploy.sql
+D:\Dashboard_Blazor\UploadApp\UploadApp.SqlServer\obj\Debug\UploadApp.SqlServer.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp.SqlServer\obj\Debug\UploadApp.SqlServer.pdb

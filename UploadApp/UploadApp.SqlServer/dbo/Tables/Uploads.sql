@@ -1,0 +1,13 @@
+﻿CREATE TABLE [dbo].[Uploads]
+(
+	[Id] INT NOT NULL PRIMARY KEY Identity(1,1),
+	[ParentId] INT NULL,
+	[Name] NVARCHAR(255) NOT NULL,
+	[Title] NVARCHAR(255) NULL,
+	[Content] NVARCHAR(MAX) NULL,
+	[IsPinned] BIT NULL DEFAULT(0),
+	[CreatedBy] NVARCHAR(255) NULL,
+	[Created] DATETIME DEFAULT(GETDATE()) NULL,
+	[ModifiedBy] NVARCHAR(255) NULL,
+	[Modified] DATETIME NULL,
+)

@@ -1,0 +1,12 @@
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\bin\Debug\net6.0\UploadApp.Models.deps.json
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\bin\Debug\net6.0\UploadApp.Models.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\bin\Debug\net6.0\UploadApp.Models.pdb
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\obj\Debug\net6.0\UploadApp.Models.csproj.AssemblyReference.cache
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\obj\Debug\net6.0\UploadApp.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\obj\Debug\net6.0\UploadApp.Models.AssemblyInfoInputs.cache
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\obj\Debug\net6.0\UploadApp.Models.AssemblyInfo.cs
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\obj\Debug\net6.0\UploadApp.Models.csproj.CoreCompileInputs.cache
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\obj\Debug\net6.0\UploadApp.Models.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\obj\Debug\net6.0\refint\UploadApp.Models.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\obj\Debug\net6.0\UploadApp.Models.pdb
+D:\Dashboard_Blazor\UploadApp\UploadApp.Models\obj\Debug\net6.0\ref\UploadApp.Models.dll
