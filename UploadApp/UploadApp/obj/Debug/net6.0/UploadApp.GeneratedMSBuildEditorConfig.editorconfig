@@ -27,6 +27,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmV0Y2hEYXRhLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Dashboard_Blazor/UploadApp/UploadApp/Pages/FrmFileUploadTest.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRnJtRmlsZVVwbG9hZFRlc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Dashboard_Blazor/UploadApp/UploadApp/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

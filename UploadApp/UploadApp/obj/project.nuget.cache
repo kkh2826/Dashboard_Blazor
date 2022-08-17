@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "/2pITo34JXZt7UJHvfJwaipTW0SuzI2b3h1FlYCN/GWKZcxqe195tZ4laUdLh9FCg0hkGPjnS/5LWZzhyaH+Ew==",
+  "dgSpecHash": "eBwuT+CT9BKs7pffV1pDWYeAcFxlv2RUY9IkJxZESjjCZvphBjKgfJl7YWbFVFBGkWMkjjlVj1i/pcbKRiaJcg==",
   "success": true,
   "projectFilePath": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\UploadApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\kkh28\\.nuget\\packages\\blazorinputfile\\0.2.0\\blazorinputfile.0.2.0.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\chartjs.blazor\\1.1.0\\chartjs.blazor.1.1.0.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\dul\\1.2.9\\dul.1.2.9.nupkg.sha512",
     "C:\\Users\\kkh28\\.nuget\\packages\\dulpager\\1.0.0\\dulpager.1.0.0.nupkg.sha512",

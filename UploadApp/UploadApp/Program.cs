@@ -5,6 +5,7 @@ using NoticeApp.Models;
 using UploadApp.Areas.Identity;
 using UploadApp.Data;
 using UploadApp.Models.Uploads;
+using UploadApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,8 @@ builder.Services.AddSingleton<WeatherForecastService>();
 
 AddDependencyInjectionContainerForUploadApp(builder);
 AddDependencyInjectionContainerForNoticeApp(builder);
+
+builder.Services.AddTransient<IFileUploadService, FileUploadService>();
 
 var app = builder.Build();
 

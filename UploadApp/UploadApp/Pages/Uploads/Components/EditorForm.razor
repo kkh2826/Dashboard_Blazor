@@ -23,19 +23,19 @@
                         <div class="form-group">
                             <label for="txtName">Name</label>
                             <InputText id="txtName" class="form-control" placeholder="Enter Title"
-                                       @bind-Value="@Model.Name"></InputText>
+                                   @bind-Value="@Model.Name"></InputText>
                             <ValidationMessage For="@(() => Model.Name)" class="form-text text-muted"></ValidationMessage>
                         </div>
                         <div class="form-group">
                             <label for="txtTitle">Title</label>
                             <InputText id="txtTitle" class="form-control" placeholder="Enter Title"
-                                       @bind-Value="@Model.Title"></InputText>
+                                   @bind-Value="@Model.Title"></InputText>
                             <ValidationMessage For="@(() => Model.Title)" class="form-text text-muted"></ValidationMessage>
                         </div>
                         <div class="form-group">
                             <label for="txtContent">Content</label>
                             <InputTextArea id="txtContext" class="form-control" placeholder="Enter Content" rows="5"
-                                           @bind-Value="@Model.Content"></InputTextArea>
+                                       @bind-Value="@Model.Content"></InputTextArea>
                             <ValidationMessage For="@(() => Model.Content)" class="form-text text-muted"></ValidationMessage>
                         </div>
                         <div class="form-group">
@@ -43,20 +43,25 @@
                             <InputSelect @bind-Value="@parentId" class="form-control" id="lstCategory">
                                 <option value="">--Select Parent--</option>
                                 @foreach (var p in parentIds)
-                                    {
-                                    <option value="@p">@p</option>
-                                    }
-                                /**/
-                            </InputSelect>
-                            <ValidationMessage For="@(() => parentId)" class="form-text text-muted"></ValidationMessage>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                            <button type="button" class="btn btn-secondary" @onclick="Hide">Cancel</button>
-                        </div>
-                    </EditForm>
-                </div>
+                                {
+                                <option value="@p">@p</option>
+                                }
+                            /**/
+                        </InputSelect>
+                        <ValidationMessage For="@(() => parentId)" class="form-text text-muted"></ValidationMessage>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtTitle">File</label>
+                        <BlazorInputFile.InputFile OnChange="HandleSelection"></BlazorInputFile.InputFile>
+                        <ValidationMessage For="@(() => Model.Title)" class="form-text text-muted"></ValidationMessage>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-secondary" @onclick="Hide">Cancel</button>
+                    </div>
+                </EditForm>
             </div>
         </div>
     </div>
+</div>
 }

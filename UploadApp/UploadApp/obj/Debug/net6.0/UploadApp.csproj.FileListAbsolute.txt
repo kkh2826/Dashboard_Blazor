@@ -76,3 +76,4 @@ D:\Dashboard_Blazor\UploadApp\UploadApp\obj\Debug\net6.0\refint\UploadApp.dll
 D:\Dashboard_Blazor\UploadApp\UploadApp\obj\Debug\net6.0\UploadApp.pdb
 D:\Dashboard_Blazor\UploadApp\UploadApp\obj\Debug\net6.0\UploadApp.genruntimeconfig.cache
 D:\Dashboard_Blazor\UploadApp\UploadApp\obj\Debug\net6.0\ref\UploadApp.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\BlazorInputFile.dll

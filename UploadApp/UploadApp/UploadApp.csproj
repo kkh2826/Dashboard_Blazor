@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BlazorInputFile" Version="0.2.0" />
     <PackageReference Include="ChartJs.Blazor" Version="1.1.0" />
     <PackageReference Include="Dul" Version="1.2.9" />
     <PackageReference Include="DulPager" Version="1.0.0" />
@@ -21,6 +22,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\UploadApp.Models\UploadApp.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Upload\" />
   </ItemGroup>
 
 </Project>

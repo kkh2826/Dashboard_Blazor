@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using BlazorInputFile;
+using Microsoft.AspNetCore.Components;
 using UploadApp.Models.Uploads;
+using UploadApp.Services;
 
 namespace UploadApp.Pages.Uploads.Components
 {
@@ -47,6 +49,19 @@ namespace UploadApp.Pages.Uploads.Components
 
         protected async void CreateOrEditClick()
         {
+            var file = selectedFiles.FirstOrDefault();
+            var fileName = "";
+            int fileSize = 0;
+            if (file != null)
+            {
+                fileName = file.Name;
+                fileSize = Convert.ToInt32(file.Size);
+                await FileUploadServiceReference.UploadAsync(file);
+
+                Model.FileName = fileName;
+                Model.FileSize = fileSize;
+
+            }
             if (!int.TryParse(parentId, out int newParentId))
             {
                 newParentId = 0;
@@ -67,6 +82,15 @@ namespace UploadApp.Pages.Uploads.Components
             IsShow = false;
 
         }
-  
+
+        [Inject]
+        public IFileUploadService FileUploadServiceReference { get; set; }
+
+        private IFileListEntry[] selectedFiles;
+        protected void HandleSelection(IFileListEntry[] files)
+        {
+            this.selectedFiles = files;
+        }
+
     }
 }

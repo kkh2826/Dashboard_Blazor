@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "UploadApp/1.0.0": {
         "dependencies": {
+          "BlazorInputFile": "0.2.0",
           "ChartJs.Blazor": "1.1.0",
           "Dul": "1.2.9",
           "DulPager": "1.0.0",
@@ -21,6 +22,18 @@
         },
         "runtime": {
           "UploadApp.dll": {}
+        }
+      },
+      "BlazorInputFile/0.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "3.1.10",
+          "Microsoft.AspNetCore.Components.Web": "3.1.10"
+        },
+        "runtime": {
+          "lib/netstandard2.1/BlazorInputFile.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "ChartJs.Blazor/1.1.0": {
@@ -627,6 +640,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BlazorInputFile/0.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wsPTwoA9fkHOxjEh0W0brNeTaVBaMCFwfBLehbRhfW+RzlIrYtlJ5qFpT5f377Ej6ELk+xeoUrkDBx9c8JF7DQ==",
+      "path": "blazorinputfile/0.2.0",
+      "hashPath": "blazorinputfile.0.2.0.nupkg.sha512"
     },
     "ChartJs.Blazor/1.1.0": {
       "type": "package",

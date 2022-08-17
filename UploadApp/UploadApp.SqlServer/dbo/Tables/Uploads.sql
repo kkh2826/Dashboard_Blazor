@@ -10,4 +10,8 @@
 	[Created] DATETIME DEFAULT(GETDATE()) NULL,
 	[ModifiedBy] NVARCHAR(255) NULL,
 	[Modified] DATETIME NULL,
+
+	FileName NVARCHAR(255) NULL,
+	FileSize INT DEFAULT 0,
+	DownCount INT DEFAULT 0
 )
