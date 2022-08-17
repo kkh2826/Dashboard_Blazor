@@ -79,3 +79,14 @@ D:\Dashboard_Blazor\UploadApp\UploadApp\obj\Debug\net6.0\ref\UploadApp.dll
 D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\BlazorInputFile.dll
 D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\VisualAcademy.Shared.dll
 D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\VisualAcademy.Shared.pdb
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\BlazorUtils.staticwebassets.runtime.json
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\Microsoft.AspNetCore.Authorization.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\Microsoft.AspNetCore.Components.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\Microsoft.AspNetCore.Components.Web.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\Microsoft.AspNetCore.Metadata.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\Microsoft.JSInterop.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\System.IO.Pipelines.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\BlazorUtils.dll
+D:\Dashboard_Blazor\UploadApp\UploadApp\bin\Debug\net6.0\BlazorUtils.pdb

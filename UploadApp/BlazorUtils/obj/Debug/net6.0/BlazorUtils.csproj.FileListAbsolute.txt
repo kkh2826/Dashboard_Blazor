@@ -1,0 +1,16 @@
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\bin\Debug\net6.0\BlazorUtils.staticwebassets.runtime.json
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\bin\Debug\net6.0\BlazorUtils.deps.json
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\bin\Debug\net6.0\BlazorUtils.dll
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\bin\Debug\net6.0\BlazorUtils.pdb
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\BlazorUtils.csproj.AssemblyReference.cache
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\BlazorUtils.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\BlazorUtils.AssemblyInfoInputs.cache
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\BlazorUtils.AssemblyInfo.cs
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\BlazorUtils.csproj.CoreCompileInputs.cache
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\staticwebassets.build.json
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\staticwebassets.development.json
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\scopedcss\bundle\BlazorUtils.styles.css
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\BlazorUtils.dll
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\refint\BlazorUtils.dll
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\BlazorUtils.pdb
+D:\Dashboard_Blazor\UploadApp\BlazorUtils\obj\Debug\net6.0\ref\BlazorUtils.dll

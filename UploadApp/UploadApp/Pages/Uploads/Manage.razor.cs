@@ -4,6 +4,9 @@ using UploadApp.Pages.Uploads.Components;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using VisualAcademy.Shared;
+using Microsoft.JSInterop;
+using BlazorUtils;
 
 namespace UploadApp.Pages.Uploads
 {
@@ -17,6 +20,14 @@ namespace UploadApp.Pages.Uploads
 
         [Inject]
         public NavigationManager NavigationManagerReference { get; set; }
+
+        [Inject]
+        public IFileStorageManager FileStorageManager { get; set; }
+
+        [Inject]
+        public IWebHostEnvironment WebHostEnvironment { get; set; }
+        [Inject]
+        public IJSRuntime JSRuntime { get; set; }
 
         /// <summary>
         /// EditorForm에 대한 참조: 모달로 글쓰기 또는 수정하기
@@ -153,6 +164,18 @@ namespace UploadApp.Pages.Uploads
             IsInlineDialogShow = true;
         }
 
+        protected async void DownloadBy(Upload model)
+        {
+            if (!string.IsNullOrEmpty(model.FileName))
+            {
+                string folderPath = Path.Combine(WebHostEnvironment.WebRootPath, "files");
+                byte[] fileBytes = await FileStorageManager.DownloadAsync(model.FileName, folderPath);
+                if (fileBytes != null)
+                {
+                    await FileUtil.SaveAs(JSRuntime, model.FileName, fileBytes);
+                }
+            }
+        }
 
         /// <summary>
         /// 모델 초기화 및 모달 폼 닫기

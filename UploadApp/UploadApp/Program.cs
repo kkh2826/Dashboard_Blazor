@@ -23,12 +23,14 @@ builder.Services.AddServerSideBlazor();
 builder.Services.AddScoped<AuthenticationStateProvider, RevalidatingIdentityAuthenticationStateProvider<IdentityUser>>();
 builder.Services.AddSingleton<WeatherForecastService>();
 
+builder.Services.AddControllersWithViews();
+
 AddDependencyInjectionContainerForUploadApp(builder);
 AddDependencyInjectionContainerForNoticeApp(builder);
 
 builder.Services.AddTransient<IFileUploadService, FileUploadService>();
 builder.Services.AddTransient<IFileStorageManager, FileStorageManager>(); // 로컬
-builder.Services.AddTransient<IFileStorageManager, BlobStorageManager>(); // 클라우드
+//builder.Services.AddTransient<IFileStorageManager, BlobStorageManager>(); // 클라우드
 
 var app = builder.Build();
 
@@ -53,9 +55,18 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllers();
-app.MapBlazorHub();
-app.MapFallbackToPage("/_Host");
+//app.MapControllers();
+//app.MapBlazorHub();
+//app.MapFallbackToPage("/_Host");
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers();
+    endpoints.MapDefaultControllerRoute();
+    endpoints.MapBlazorHub();
+    endpoints.MapFallbackToPage("/_Host");
+});
+
 
 app.Run();
 

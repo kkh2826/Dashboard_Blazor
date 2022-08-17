@@ -1,12 +1,31 @@
 {
   "Version": 1,
-  "Hash": "4xGAqce7r0iBizVZl7UavrJQgX0GBKXDBI6ppzpaq3s=",
+  "Hash": "ePejzG5F6bJsnRv+i6QvtsG3f1P095cn5K1y1a4s6cI=",
   "Source": "UploadApp",
   "BasePath": "_content/UploadApp",
   "Mode": "Default",
   "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "D:\\Dashboard_Blazor\\UploadApp\\BlazorUtils\\BlazorUtils.csproj",
+      "Version": 2,
+      "Source": "BlazorUtils",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
   "DiscoveryPatterns": [
+    {
+      "Name": "BlazorUtils\\wwwroot",
+      "Source": "BlazorUtils",
+      "ContentRoot": "D:\\Dashboard_Blazor\\UploadApp\\BlazorUtils\\wwwroot\\",
+      "BasePath": "_content/BlazorUtils",
+      "Pattern": "**"
+    },
     {
       "Name": "UploadApp\\wwwroot",
       "Source": "UploadApp",
@@ -1275,6 +1294,23 @@
       "OriginalItemSpec": "C:\\Users\\kkh28\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\6.0.7\\staticwebassets\\V5\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
+      "Identity": "D:\\Dashboard_Blazor\\UploadApp\\BlazorUtils\\wwwroot\\saveAsFile.js",
+      "SourceId": "BlazorUtils",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\Dashboard_Blazor\\UploadApp\\BlazorUtils\\wwwroot\\",
+      "BasePath": "_content/BlazorUtils",
+      "RelativePath": "saveAsFile.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\saveAsFile.js"
+    },
+    {
       "Identity": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\obj\\Debug\\net6.0\\scopedcss\\bundle\\UploadApp.styles.css",
       "SourceId": "UploadApp",
       "SourceType": "Computed",
@@ -1528,6 +1564,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\wwwroot\\files\\capture1.PNG",
+      "SourceId": "UploadApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\wwwroot\\",
+      "BasePath": "_content/UploadApp",
+      "RelativePath": "files/capture1.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\capture1.PNG"
+    },
+    {
+      "Identity": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\wwwroot\\files\\capture2.PNG",
+      "SourceId": "UploadApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\wwwroot\\",
+      "BasePath": "_content/UploadApp",
+      "RelativePath": "files/capture2.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\files\\capture2.PNG"
     },
     {
       "Identity": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\wwwroot\\Upload\\capture1.PNG",

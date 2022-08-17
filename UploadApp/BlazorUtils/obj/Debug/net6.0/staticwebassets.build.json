@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "NyOrkGmlyP5zW8sD194nK6l5lkBysa8K22QjBq1CB5E=",
+  "Source": "BlazorUtils",
+  "BasePath": "_content/BlazorUtils",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BlazorUtils\\wwwroot",
+      "Source": "BlazorUtils",
+      "ContentRoot": "D:\\Dashboard_Blazor\\UploadApp\\BlazorUtils\\wwwroot\\",
+      "BasePath": "_content/BlazorUtils",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Dashboard_Blazor\\UploadApp\\BlazorUtils\\wwwroot\\saveAsFile.js",
+      "SourceId": "BlazorUtils",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dashboard_Blazor\\UploadApp\\BlazorUtils\\wwwroot\\",
+      "BasePath": "_content/BlazorUtils",
+      "RelativePath": "saveAsFile.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\saveAsFile.js"
+    }
+  ]
+}
