@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cZMHgy3Rywu/oQGRl9c1F2FN2fydNQp2Y86WDjiqpbA=",
+  "Hash": "4xGAqce7r0iBizVZl7UavrJQgX0GBKXDBI6ppzpaq3s=",
   "Source": "UploadApp",
   "BasePath": "_content/UploadApp",
   "Mode": "Default",
@@ -1528,6 +1528,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\wwwroot\\Upload\\capture1.PNG",
+      "SourceId": "UploadApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\wwwroot\\",
+      "BasePath": "_content/UploadApp",
+      "RelativePath": "Upload/capture1.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\capture1.PNG"
+    },
+    {
+      "Identity": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\wwwroot\\Upload\\capture2.PNG",
+      "SourceId": "UploadApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp\\wwwroot\\",
+      "BasePath": "_content/UploadApp",
+      "RelativePath": "Upload/capture2.PNG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\capture2.PNG"
     }
   ]
 }

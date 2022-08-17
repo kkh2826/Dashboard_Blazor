@@ -4,8 +4,10 @@ using Microsoft.EntityFrameworkCore;
 using NoticeApp.Models;
 using UploadApp.Areas.Identity;
 using UploadApp.Data;
+using UploadApp.Managers;
 using UploadApp.Models.Uploads;
 using UploadApp.Services;
+using VisualAcademy.Shared;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,8 @@ AddDependencyInjectionContainerForUploadApp(builder);
 AddDependencyInjectionContainerForNoticeApp(builder);
 
 builder.Services.AddTransient<IFileUploadService, FileUploadService>();
+builder.Services.AddTransient<IFileStorageManager, FileStorageManager>(); // 로컬
+builder.Services.AddTransient<IFileStorageManager, BlobStorageManager>(); // 클라우드
 
 var app = builder.Build();
 

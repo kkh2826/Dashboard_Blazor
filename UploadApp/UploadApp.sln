@@ -3,15 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadApp", "UploadApp\UploadApp.csproj", "{C1885FAC-0450-439C-ABC4-FADA67A96C89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadApp", "UploadApp\UploadApp.csproj", "{C1885FAC-0450-439C-ABC4-FADA67A96C89}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UploadApp.SqlServer", "UploadApp.SqlServer\UploadApp.SqlServer.sqlproj", "{4230BE77-3988-4614-8487-8561EF846384}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadApp.Models", "UploadApp.Models\UploadApp.Models.csproj", "{F5915528-FAFB-4A9C-BD12-6E55AB711EDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadApp.Models", "UploadApp.Models\UploadApp.Models.csproj", "{F5915528-FAFB-4A9C-BD12-6E55AB711EDC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadApp.Models.Tests", "UploadApp.Models.Tests\UploadApp.Models.Tests.csproj", "{CB89269B-E9A7-45AF-86D2-5F502C276D8E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadApp.Models.Tests", "UploadApp.Models.Tests\UploadApp.Models.Tests.csproj", "{CB89269B-E9A7-45AF-86D2-5F502C276D8E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadApp.Apis", "UploadApp.Apis\UploadApp.Apis.csproj", "{1B9E89C4-00FA-4A21-9163-8ECBA82084AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UploadApp.Apis", "UploadApp.Apis\UploadApp.Apis.csproj", "{1B9E89C4-00FA-4A21-9163-8ECBA82084AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualAcademy.Shared", "VisualAcademy.Shared\VisualAcademy.Shared.csproj", "{45041B65-2CF0-43B1-A13A-2B3F8D47CEB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{1B9E89C4-00FA-4A21-9163-8ECBA82084AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B9E89C4-00FA-4A21-9163-8ECBA82084AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B9E89C4-00FA-4A21-9163-8ECBA82084AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45041B65-2CF0-43B1-A13A-2B3F8D47CEB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45041B65-2CF0-43B1-A13A-2B3F8D47CEB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45041B65-2CF0-43B1-A13A-2B3F8D47CEB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45041B65-2CF0-43B1-A13A-2B3F8D47CEB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

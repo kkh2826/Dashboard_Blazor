@@ -18,7 +18,8 @@
           "Microsoft.AspNetCore.Identity.UI": "6.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.7",
-          "UploadApp.Models": "1.0.0"
+          "UploadApp.Models": "1.0.0",
+          "VisualAcademy.Shared": "1.0.0"
         },
         "runtime": {
           "UploadApp.dll": {}
@@ -632,6 +633,11 @@
         "runtime": {
           "UploadApp.Models.dll": {}
         }
+      },
+      "VisualAcademy.Shared/1.0.0": {
+        "runtime": {
+          "VisualAcademy.Shared.dll": {}
+        }
       }
     }
   },
@@ -1097,6 +1103,11 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "UploadApp.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "VisualAcademy.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

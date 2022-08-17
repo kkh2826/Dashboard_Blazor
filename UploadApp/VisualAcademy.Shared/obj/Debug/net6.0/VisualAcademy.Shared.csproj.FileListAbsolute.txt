@@ -1,0 +1,12 @@
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\bin\Debug\net6.0\VisualAcademy.Shared.deps.json
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\bin\Debug\net6.0\VisualAcademy.Shared.dll
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\bin\Debug\net6.0\VisualAcademy.Shared.pdb
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\obj\Debug\net6.0\VisualAcademy.Shared.csproj.AssemblyReference.cache
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\obj\Debug\net6.0\VisualAcademy.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\obj\Debug\net6.0\VisualAcademy.Shared.AssemblyInfoInputs.cache
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\obj\Debug\net6.0\VisualAcademy.Shared.AssemblyInfo.cs
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\obj\Debug\net6.0\VisualAcademy.Shared.csproj.CoreCompileInputs.cache
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\obj\Debug\net6.0\VisualAcademy.Shared.dll
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\obj\Debug\net6.0\refint\VisualAcademy.Shared.dll
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\obj\Debug\net6.0\VisualAcademy.Shared.pdb
+D:\Dashboard_Blazor\UploadApp\VisualAcademy.Shared\obj\Debug\net6.0\ref\VisualAcademy.Shared.dll

@@ -974,6 +974,16 @@
         "runtime": {
           "bin/placeholder/UploadApp.Models.dll": {}
         }
+      },
+      "VisualAcademy.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/VisualAcademy.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VisualAcademy.Shared.dll": {}
+        }
       }
     }
   },
@@ -2690,6 +2700,11 @@
       "type": "project",
       "path": "../UploadApp.Models/UploadApp.Models.csproj",
       "msbuildProject": "../UploadApp.Models/UploadApp.Models.csproj"
+    },
+    "VisualAcademy.Shared/1.0.0": {
+      "type": "project",
+      "path": "../VisualAcademy.Shared/VisualAcademy.Shared.csproj",
+      "msbuildProject": "../VisualAcademy.Shared/VisualAcademy.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -2704,7 +2719,8 @@
       "Microsoft.AspNetCore.Identity.UI >= 6.0.7",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.7",
-      "UploadApp.Models >= 1.0.0"
+      "UploadApp.Models >= 1.0.0",
+      "VisualAcademy.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2736,6 +2752,9 @@
           "projectReferences": {
             "D:\\Dashboard_Blazor\\UploadApp\\UploadApp.Models\\UploadApp.Models.csproj": {
               "projectPath": "D:\\Dashboard_Blazor\\UploadApp\\UploadApp.Models\\UploadApp.Models.csproj"
+            },
+            "D:\\Dashboard_Blazor\\UploadApp\\VisualAcademy.Shared\\VisualAcademy.Shared.csproj": {
+              "projectPath": "D:\\Dashboard_Blazor\\UploadApp\\VisualAcademy.Shared\\VisualAcademy.Shared.csproj"
             }
           }
         }
