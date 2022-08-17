@@ -39,6 +39,9 @@ namespace UploadApp.Pages.Uploads.Components
         [Inject]
         public IFileStorageManager FileStorageManager { get; set; }
 
+        [Inject]
+        public IWebHostEnvironment WebHostEnvironment { get; set; }
+
         protected int[] parentIds = { 1, 2, 3 };
 
 
@@ -62,9 +65,12 @@ namespace UploadApp.Pages.Uploads.Components
                 fileSize = Convert.ToInt32(file.Size);
                 //awit FileUploadServiceReference.UploadAsync(file);
 
-                var ms = new MemoryStream();
-                await file.Data.CopyToAsync(ms);
-                await FileStorageManager.UploadAsync(ms.ToArray(), file.Name, "", true);
+                //var ms = new MemoryStream();
+                //await file.Data.CopyToAsync(ms);
+                //await FileStorageManager.UploadAsync(ms.ToArray(), file.Name, "", true);
+
+                string folderPath = Path.Combine(WebHostEnvironment.WebRootPath, "files");
+                await FileStorageManager.UploadAsync(file.Data, file.Name, folderPath, true);
 
                 Model.FileName = fileName;
                 Model.FileSize = fileSize;
