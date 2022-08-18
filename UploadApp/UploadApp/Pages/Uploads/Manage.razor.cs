@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using VisualAcademy.Shared;
 using Microsoft.JSInterop;
 using BlazorUtils;
+using OfficeOpenXml;
+using System.Drawing;
 
 namespace UploadApp.Pages.Uploads
 {
@@ -220,6 +222,37 @@ namespace UploadApp.Pages.Uploads
             await SearchData();
 
             StateHasChanged();
+        }
+
+
+        protected void DownloadExcel()
+        {
+            using (var package = new ExcelPackage())
+            {
+                var worksheet = package.Workbook.Worksheets.Add("Uploads");
+                var tableBody = worksheet.Cells["B2:B2"].LoadFromCollection(
+                    (from m in models select new { m.Created, m.Name, m.Title, m.DownCount, m.FileName }), true);
+
+                var uploadCol = tableBody.Offset(1, 1, models.Count, 1);
+                var rule = uploadCol.ConditionalFormatting.AddThreeColorScale();
+                rule.LowValue.Color = Color.SkyBlue;
+                rule.MiddleValue.Color = Color.White;
+                rule.HighValue.Color = Color.Red;
+
+                var header = worksheet.Cells["B2:F2"];
+                worksheet.DefaultColWidth = 25;
+                worksheet.Cells[3, 2, models.Count + 2, 2].Style.Numberformat.Format = "yyyy MMM d DDD";
+                tableBody.Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Left;
+                tableBody.Style.Fill.PatternType = OfficeOpenXml.Style.ExcelFillStyle.Solid;
+                tableBody.Style.Fill.BackgroundColor.SetColor(Color.WhiteSmoke);
+                tableBody.Style.Border.BorderAround(OfficeOpenXml.Style.ExcelBorderStyle.Medium);
+                header.Style.Font.Bold = true;
+                header.Style.Font.Color.SetColor(Color.White);
+                header.Style.Fill.BackgroundColor.SetColor(Color.DarkBlue);
+
+                FileUtil.SaveAs(JSRuntime, "Uploads.xlsx", package.GetAsByteArray());
+
+            }
         }
     }
 }
